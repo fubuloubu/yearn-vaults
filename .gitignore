@@ -1,8 +1,12 @@
+# Python Stuff
 __pycache__
 .history
 .hypothesis/
-build/
-reports/
+
+# Ape stuff
+.build/
+contracts/.cache/
+
+# Node
 node_modules/
-.test_durations
-yarn-error.log 
+yarn-error.log

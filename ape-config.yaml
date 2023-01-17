@@ -1,0 +1,28 @@
+name: yearn-vaults
+version: 0.4.5
+
+plugins:
+  - name: solidity
+  - name: vyper
+  - name: foundry
+
+ethereum:
+  local:
+    default_provider: foundry
+
+dependencies:
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.7.1
+
+solidity:
+  import_remapping:
+    - "@openzeppelin/contracts=OpenZeppelin/4.7.1"
+
+test:
+  gas:
+    exclude:
+      - contract_name: SafeMath
+      - contract_name: SafeERC20
+      - contract_name: Address
+      - contract_name: Token
